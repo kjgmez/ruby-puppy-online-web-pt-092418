@@ -1,5 +1,6 @@
 require 'pry'
 class Dog
+  attr_reader :name
   @@all = []
   def initialize(name)
     @name = name
@@ -10,5 +11,6 @@ class Dog
   end
   def self.all
     binding.pry
+    @@all.each{|x| puts x[@name]}
   end
 end
